@@ -1,0 +1,53 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: adamwaheed
+ * Date: 09/12/2018
+ * Time: 5:37 PM
+ */
+
+
+use Atolon\Finance\Models\Sequence;
+use Illuminate\Database\Seeder;
+
+class SequenceSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $array = [
+
+            [
+                'data_type' => 'Invoice',
+                'current_number' => 1000,
+                'prefix' => 'INV',
+                'initial_number' => 1000,
+                'post_fix' => '2018',
+                'template' => 'prefix / current_number / post_fix',
+                'reset_by' => 'year',
+                'type' => 'invoice_number',
+            ],
+            [
+                'data_type' => 'Receipt',
+                'current_number' => 1000,
+                'prefix' => 'RE',
+                'initial_number' => 1000,
+                'post_fix' => '2018',
+                'template' => 'prefix / current_number / post_fix',
+                'reset_by' => 'year',
+                'type' => 'receipt_number',
+            ],
+        ];
+
+        foreach ($array as $item) {
+            $item['date'] = time();
+            $new = new  Sequence($item);
+            $new->save();
+
+        }
+    }
+}

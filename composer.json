@@ -1,0 +1,12 @@
+{
+    "name": "atolon/finance",
+    "description": "Simple cash colleciton system",
+    "authors": [
+        {
+            "name": "adam",
+            "email": "i@live.mv"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

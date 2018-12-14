@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: adamwaheed
+ * Date: 02/12/2018
+ * Time: 2:34 PM
+ */
+
+namespace Atolon\Finance\Exceptions;
+
+use Exception;
+class UnauthenticatedException extends Exception
+{
+    /**
+     * @var string
+     */
+    protected $message = 'User is not authenticated, and can not use promotion code.';
+    /**
+     * @var int
+     */
+    protected $code = 401;
+}
