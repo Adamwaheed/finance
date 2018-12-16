@@ -7,6 +7,17 @@
             "email": "i@live.mv"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Atolon\\Finance\\": "src"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Adamwaheed/lara-finance"
+        }
+    ],
     "minimum-stability": "dev",
     "require": {}
 }
