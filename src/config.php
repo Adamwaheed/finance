@@ -53,7 +53,15 @@ return [
      * 2 = sunday , its default in this package
      */
 
-    'week_starts_at'=>2
+    'week_starts_at'=>2,
+
+
+
+    'route_middleware'=>'',
+
+
+
+
 
 
 ];
