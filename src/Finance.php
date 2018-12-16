@@ -25,8 +25,9 @@ class Finance
 
     public $coupon;
 
-    public function __construct(Coupon $coupon)
+    public function __construct()
     {
+        $coupon = new Coupon();
         $this->coupon = $coupon;
     }
 
@@ -35,6 +36,8 @@ class Finance
 
 
         $this->result = $model->calculate();
+
+
 
         $invoice_exist = Invoice::whereInvoiceableType($this->result->invoiceable_type)->whereInvoiceableId($this->result->invoiceable_id)->first();
 

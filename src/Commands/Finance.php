@@ -11,7 +11,7 @@ class Finance extends Command
      *
      * @var string
      */
-    protected $signature = 'finance:name {name}';
+    protected $signature = 'finance {name}';
 
     /**
      * The console command description.
@@ -108,6 +108,8 @@ class class_name implements FinanceInterface
         $this->error_message = 'no error';
         $this->invoiceable_type = get_class($model);
         $this->invoiceable_id = $model->id;
+        $this->model = $model;
+        $this->status = 'outstanding';
 
     }
     /* this function will generate all charges
