@@ -1,7 +1,7 @@
 <h1>Finnance</h1>
 Laravel Simple Cash Management Package
 
-<h1>Getting Started<h1>
+<h1>Getting Started</h1>
 
 1.Install via  <code> composer require atolon/finance </code>
 
