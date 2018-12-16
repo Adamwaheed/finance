@@ -9,8 +9,10 @@ Laravel Simple Cash Management Package
 
 <code>
 'providers' => [
+  </br>
    ...
-   \Atolon\Finance\FinanceServiceProvider::class,
+   </br>
+   \Atolon\Finance\FinanceServiceProvider::class, <br>
 
 ],
 </code>
