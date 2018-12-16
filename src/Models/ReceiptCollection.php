@@ -9,6 +9,7 @@
 namespace Atolon\Finance\Models;
 
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class ReceiptCollection extends Model
@@ -22,7 +23,9 @@ class ReceiptCollection extends Model
         'amount',
     ];
 
-    public function receipt(){
+    public function receipt()
+    {
         return $this->belongsTo(Receipt::class);
     }
+
 }

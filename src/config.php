@@ -47,4 +47,13 @@ return [
     /**
      * User model
      */
+
+    /**
+     * 1 = monday
+     * 2 = sunday , its default in this package
+     */
+
+    'week_starts_at'=>2
+
+
 ];

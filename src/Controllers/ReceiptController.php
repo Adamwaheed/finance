@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use Atolon\Finance\Facades\Finance;
 use Atolon\Finance\Models\Receipt;
 use Atolon\Finance\Requests\Pay;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Mockery\Exception;
 
@@ -32,6 +33,13 @@ class ReceiptController extends FinanceBaseController
 
         if ($request->receipt_number) {
             $q->where('receipt_number', 'like', '%' . $request->receipt_number . '%');
+        }
+
+
+        if ($request->from_date && $request->to_date) {
+            $from_date = Carbon::parse($request->from_date);
+            $to_date = Carbon::parse($request->to_date);
+            $q->whereBetween('created_at',[$from_date,$to_date]);
         }
 
         $data = $q->paginate();
